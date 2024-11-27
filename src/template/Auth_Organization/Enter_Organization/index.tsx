@@ -1,11 +1,11 @@
 import TextInput from 'components/Inputs';
-import BaseButton, { TextButton } from 'components/Button';
+import BaseButton from 'components/Button';
 import ToolsLogo from 'components/ToolsLogo';
 import { useRouter } from 'next/router';
 import LinedText from 'components/Text';
 import * as S from './styles';
 
-const RegisterTemplate = () => {
+const EnterOrganizationTemplate = () => {
     const router = useRouter();
 
     return (
@@ -14,39 +14,39 @@ const RegisterTemplate = () => {
                 <ToolsLogo />
             </S.TitleDiv>
             <S.MainDiv>
-                <S.Title>Faça seu cadastro</S.Title>
+                <S.Title>Entrar em Organização</S.Title>
                 <S.InputDiv>
-                    <LinedText>Sobre Você</LinedText>
+                    <LinedText>Entrar em Organização</LinedText>
                     <TextInput
                         fullWidth
-                        label="Nome completo"
-                        placeholder="Thiago Velasquez"
+                        label="Escolha sua Organização"
+                        placeholder="Poli Júnior"
                     />
                     <TextInput
                         fullWidth
-                        label="Email"
-                        placeholder="e.g.c.t@mail.com"
+                        label="Cargo de entrada"
+                        placeholder="Membro"
                     />
-                    <TextInput fullWidth label="Senha" type="password" />
-                    <TextInput
-                        fullWidth
-                        label="Confirme a senha"
-                        type="password"
-                    />
+                    <S.ButtonDiv>
+                        <BaseButton
+                            onClick={() => {
+                                router.push('/login');
+                            }}
+                        >
+                            Solicitar Entrada
+                        </BaseButton>
+                    </S.ButtonDiv>
+                </S.InputDiv>
+                <S.InputDiv>
+                    <LinedText>Criar a minha Organização</LinedText>
                     <S.ButtonDiv>
                         <BaseButton
                             onClick={() => {
                                 router.push('/org_auth/register');
                             }}
                         >
-                            Continuar
+                            Criar Organização
                         </BaseButton>
-                        <TextButton
-                            onClick={() => {
-                                router.push('/login');
-                            }}
-                            text="Já possui conta? Fazer Login"
-                        />
                     </S.ButtonDiv>
                 </S.InputDiv>
             </S.MainDiv>
@@ -54,4 +54,4 @@ const RegisterTemplate = () => {
     );
 };
 
-export default RegisterTemplate;
+export default EnterOrganizationTemplate;

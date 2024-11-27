@@ -19,7 +19,7 @@ const LoginTemplate = () => {
                         label="Email"
                         placeholder="e.g.c.t@mail.com"
                     />
-                    <TextInput fullWidth label="Senha" />
+                    <TextInput fullWidth label="Senha" type="password" />
                     <S.ButtonDiv>
                         <BaseButton
                             onClick={() => {

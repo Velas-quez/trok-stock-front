@@ -15,8 +15,8 @@ const RegisterTemplate = () => {
             </S.TitleDiv>
             <S.MainDiv>
                 <S.Title>Faça seu cadastro</S.Title>
+                <LinedText>Sobre Você</LinedText>
                 <S.InputDiv>
-                    <LinedText>Sobre Você</LinedText>
                     <TextInput
                         fullWidth
                         label="Nome completo"
@@ -36,7 +36,7 @@ const RegisterTemplate = () => {
                     <S.ButtonDiv>
                         <BaseButton
                             onClick={() => {
-                                router.push('/org_auth/register');
+                                router.push('/login');
                             }}
                         >
                             Continuar
